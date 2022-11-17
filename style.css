@@ -1,0 +1,13 @@
+img {
+    width: 50px;
+}
+.red {
+    color: red;
+    font-size: 20px;
+    border: red 1px solid;
+    padding: 2px;
+}
+
+.large {
+    font-size: 40px;
+}
