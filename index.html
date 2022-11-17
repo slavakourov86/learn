@@ -5,9 +5,20 @@
 <p class="red">
 
 
-Hello: <input id = "hello-message" value="Hello World" class="hello-message input"/>
+<input id = "first-name" value="Slava" class="first-name"/>
+<input id = "last-name" value="Kourov" class="last-name"/>
+<input id = "address" value="Perm" class="address"/>
 </p>
+<select id="cities">
+    <option>Perm</option>
+    <option>Minsk</option>
+    <option selected="selected">Kungur</option>
+</select>
 
+<textarea id="hobbies">JS, HTML, CSS</textarea>
+<div id="avatar-wrapper">
+    <img id="avatar" src="https://www.freedigitalphotos.net/images/previews/project-10012307.jpg" alt="Аватар">
+</div>
 <ul>
     <li class="red large">learn js</li>
     <li>learn html</li>
@@ -15,9 +26,21 @@ Hello: <input id = "hello-message" value="Hello World" class="hello-message inpu
 </ul>
 
 <script>
-    var helloMessageEl;
-    var idhelloMessage;
-    helloMessageId = 'hello-message';
-    helloMessageEl = document.getElementById(helloMessageId);
-    window.alert(helloMessageEl.value);
+    var firstNameId = 'first-name';
+    var firstNameEl = document.getElementById(lastNameId);
+    var addressId = 'last-name';
+    var addressEl = document.getElementById(firstNameId);
+    var lastNameId = 'address';
+    var lastNameEl = document.getElementById(addressId);;
+    var citiesId = 'cities';
+    var citiesEl = document.getElementById(citiesId);;
+    var hobbiesId = 'hobbies';
+    var hobbiesEl = document.getElementById(hobbiesId);
+    var avatarWrapperId = 'avatar-wrapper';
+    var avatarWrapperEl = document.getElementById(avatarWrapperId);
+    var avatarId = 'avatar';
+    var avatarEl = document.getElementById(avatarId);
+    // window.alert(firstNameEl.value);
+    // window.alert(lastNameEl.value);
+    window.alert(avatarEl.alt);
 </script>
