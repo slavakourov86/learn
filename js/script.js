@@ -12,10 +12,21 @@ var avatarWrapperId = 'avatar-wrapper';
 var avatarWrapperEl = document.getElementById(avatarWrapperId);
 var avatarId = 'avatar';
 var avatarEl = document.getElementById(avatarId);
-// window.alert(firstNameEl.value);
-// window.alert(lastNameEl.value);
+
+function alertValues() {
+    console.log(firstNameEl.value);
+    console.log(lastNameEl.value);
+    console.log(addressEl.value);
+
+}
+
+alertValues();
+alertValues();
+
+
+// console.log(lastNameEl.value);
 firstNameEl.setAttribute('value', 'Andrew')
-window.alert(firstNameEl.className);
+// console.logfirstNameEl.className);
 firstNameEl.className = 'first-name default-input error-input';
 avatarEl.src = 'https://avatars.mds.yandex.net/i?id=0da35e50cb4005b229e728e2df58e3592d070bf8-5390940-images-thumbs&n=13';
 hobbiesEl.value = 'У меня нет интересов';
