@@ -1,39 +1,37 @@
-function logValue(id) {
-    var el = document.getElementById(id);
-    console.log(el.value);
+var buttonPlus = document.getElementById('buttonPlus');
+var buttonMinus = document.getElementById('buttonMinus');
+var buttonMulti = document.getElementById('buttonMulti');
+var buttonDev = document.getElementById('buttonDev');
+var input1 = document.getElementById('number1');
+var input2 = document.getElementById('number2');
+
+
+function onButtonPlusClick() {
+    var number1 = Number(input1.value);
+    var number2 = Number(input2.value);
+    var result = number1 + number2;
+    console.log(result);
+}
+function onButtonMinusClick() {
+    var number1 = Number(input1.value);
+    var number2 = Number(input2.value);
+    var result = number1 - number2;
+    console.log(result);
+}
+function onButtonMultiClick() {
+    var number1 = Number(input1.value);
+    var number2 = Number(input2.value);
+    var result = number1 * number2;
+    console.log(result);
+}
+function onButtonDevClick() {
+    var number1 = Number(input1.value);
+    var number2 = Number(input2.value);
+    var result = number1 / number2;
+    console.log(result);
 }
 
-function getValue(id) {
-    var el = document.getElementById(id);
-    return el.value;
-}
-
-
-var firstNameId = 'first-name';
-var firstNameEl = document.getElementById(firstNameId);
-var lastNameId = 'last-name';
-var lastNameEl = document.getElementById(lastNameId);
-var addressId = 'address';
-var addressEl = document.getElementById(addressId);
-var citiesId = 'cities';
-var citiesEl = document.getElementById(citiesId);
-var hobbiesId = 'hobbies';
-var hobbiesEl = document.getElementById(hobbiesId);
-var avatarWrapperId = 'avatar-wrapper';
-var avatarWrapperEl = document.getElementById(avatarWrapperId);
-var avatarId = 'avatar';
-var avatarEl = document.getElementById(avatarId);
-
-logValue(firstNameId);
-logValue(lastNameId);
-var value = getValue(firstNameId);
-
-window.alert(value);
-
-
-// console.log(lastNameEl.value);
-firstNameEl.setAttribute('value', 'Andrew')
-// console.logfirstNameEl.className);
-firstNameEl.className = 'first-name default-input error-input';
-avatarEl.src = 'https://avatars.mds.yandex.net/i?id=0da35e50cb4005b229e728e2df58e3592d070bf8-5390940-images-thumbs&n=13';
-hobbiesEl.value = 'Мне интересно программирование';
+buttonPlus.addEventListener('click', onButtonPlusClick);
+buttonMinus.addEventListener('click', onButtonMinusClick);
+buttonMulti.addEventListener('click', onButtonMultiClick);
+buttonDev.addEventListener('click', onButtonDevClick);

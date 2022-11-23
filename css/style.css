@@ -1,22 +1,23 @@
-img {
-    width: 50px;
-}
-.red {
-    color: red;
-    font-size: 20px;
-    border: red 1px solid;
-    padding: 2px;
-}
-
-.large {
-    font-size: 40px;
+.jssamc-calculator {
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: lightblue;
+    padding: 20px;
+    border: 1px solid black;
 }
 
-.default-input {
-    border: green 5px solid;
-    padding: 5px;
+.jssamc-calculator .operations-blok button {
+    width: 40px;
+    height: 40px;
+    margin: 20px;
 }
 
-.error-input {
-    border: red 1px solid;
+.jssamc-calculator .inputs-blok .input-blok label {
+    display: block;
+}
+
+.jssamc-calculator .inputs-blok .input-blok {
+    display: inline-block;
+    padding: 10px;
 }
