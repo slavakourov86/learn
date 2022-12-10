@@ -1,8 +1,4 @@
-var buttonPlus = document.getElementById('buttonPlus');
-var buttonMinus = document.getElementById('buttonMinus');
-var buttonMulti = document.getElementById('buttonMulti');
-var buttonDev = document.getElementById('buttonDev');
-
+var arrayOfButtons = document.getElementsByClassName('operation-button');
 var input1 = document.getElementById('number1');
 var input2 = document.getElementById('number2');
 
@@ -38,7 +34,10 @@ function onButtonClick(eventObject) {
     makeOper(oper);
 }
 
-buttonPlus.addEventListener('click', onButtonClick);
-buttonMinus.addEventListener('click', onButtonClick);
-buttonMulti.addEventListener('click', onButtonClick);
-buttonDev.addEventListener('click', onButtonClick);
+
+
+for (var i=0; i <arrayOfButtons.length; i++) {
+    var button = arrayOfButtons[i];
+    button.addEventListener('click', onButtonClick);
+}
+console.log(arrayOfButtons);
