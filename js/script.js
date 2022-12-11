@@ -40,4 +40,3 @@ for (var i=0; i <arrayOfButtons.length; i++) {
     var button = arrayOfButtons[i];
     button.addEventListener('click', onButtonClick);
 }
-console.log(arrayOfButtons);

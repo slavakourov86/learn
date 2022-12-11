@@ -1,23 +1,38 @@
-.jssamc-calculator {
-    width: 500px;
-    margin: 0 auto;
-    text-align: center;
-    background-color: lightblue;
-    padding: 20px;
-    border: 1px solid black;
-}
-
-.jssamc-calculator .operations-blok button {
-    width: 40px;
-    height: 40px;
-    margin: 20px;
-}
-
-.jssamc-calculator .inputs-blok .input-blok label {
-    display: block;
-}
-
-.jssamc-calculator .inputs-blok .input-blok {
-    display: inline-block;
+.content-news .section-news li {
     padding: 10px;
+}
+
+.content-news .section-hot li:hover {
+    background-color: darkblue;
+}
+
+.content-news .section-realty li:hover {
+    background-color: cornflowerblue;
+}
+
+.content-news .section-news li:hover a {
+    color: white;
+}
+
+.content-news .section-hot h2 {
+    color: white;
+    padding: 10px;
+    background-color: darkblue;
+}
+
+.content-news .section-realty h2 {
+    color: white;
+    padding: 10px;
+    background-color: cornflowerblue;
+}
+
+.content-news .section-hot .footer {
+    color: darkblue;
+}
+
+.content-news .section-realty .footer {
+    color: cornflowerblue;
+}
+.content-news .section-news .footer {
+    background-color: white;
 }
