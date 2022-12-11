@@ -1,42 +1,42 @@
-var arrayOfButtons = document.getElementsByClassName('operation-button');
-var input1 = document.getElementById('number1');
-var input2 = document.getElementById('number2');
+// поиск елементов
+var showPrevBtn = document.getElementById('show-prev');
+var showNextBtn = document.getElementById('show-next');
+var slideImg = document.getElementById('slide-img');
 
-function makeOper(parOper) {
-    var Number1 = Number(input1.value);
-    var Number2 = Number(input2.value);
-    if (parOper === '+') {
-        var result = Number1 + Number2;
-        console.log(result);
-    }
-    else if (parOper === '-') {
-        var result = Number1 - Number2;
-        console.log(result);
-    }
-    else if  (parOper === '*') {
-        var result = Number1 * Number2;
-        console.log(result);
-    }
-    else if  (parOper === '/') {
-        var result = Number1 / Number2;
-        console.log(result);
-    }
-    else {
-        var result = 'Operation is unknown';
-        console.log(result);
-        console.log(parOper);
+// подписываемся на сабытия
+showPrevBtn.addEventListener('click', onShowPrevBtnClick);
+showNextBtn.addEventListener('click', onShowNextBtnClick);
+
+// создаем массив с картинками
+var imgUrls = [
+    'https://avatars.mds.yandex.net/i?id=875d7e96cb94917ebbd3498db1598802b15ca8f3-6335046-images-thumbs&n=13',
+    'https://avatars.mds.yandex.net/i?id=49a0ca437b3107b9d27f38f85c68f83481037341-4628606-images-thumbs&n=13',
+    'https://avatars.mds.yandex.net/i?id=aa42f0bc82d663d6b7cdc9a45ea7173f3be66c38-7552315-images-thumbs&n=13',
+    'https://avatars.mds.yandex.net/i?id=a1c9b918f64f1525262eadec7b071ff7ea54aecb-4838366-images-thumbs&n=13'
+];
+
+// начальное положение
+var curentImgIndex = 0;
+showPrevBtn.disabled = true;
+slideImg.src = imgUrls[curentImgIndex];
+
+// оперделение функций
+function onShowPrevBtnClick() {
+    slideImg.src = imgUrls[curentImgIndex];
+    console.log('perv clicked');
+    // Условие достижения конца списка картинок
+    curentImgIndex--;
+    if (curentImgIndex === 0) {
+        showPrevBtn.disabled = true;
     }
 }
-
-function onButtonClick(eventObject) {
-    var clickedEl = eventObject.currentTarget;
-    var oper = clickedEl.innerHTML;
-    makeOper(oper);
-}
-
-
-
-for (var i=0; i <arrayOfButtons.length; i++) {
-    var button = arrayOfButtons[i];
-    button.addEventListener('click', onButtonClick);
+function onShowNextBtnClick() {
+    curentImgIndex++;
+    slideImg.src = imgUrls[curentImgIndex];
+    console.log('next clicked');
+    showPrevBtn.disabled = false;
+    // Условие достижения конца списка картинок
+    if (curentImgIndex === (imgUrls.length-1)) {
+        showNextBtn.disabled = true;
+    }
 }

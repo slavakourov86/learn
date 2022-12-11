@@ -1,38 +1,9 @@
-.content-news .section-news li {
-    padding: 10px;
+.samc-slider {
+    width: 50%;
+    margin: auto;
+    text-align: center;
 }
 
-.content-news .section-hot li:hover {
-    background-color: darkblue;
-}
-
-.content-news .section-realty li:hover {
-    background-color: cornflowerblue;
-}
-
-.content-news .section-news li:hover a {
-    color: white;
-}
-
-.content-news .section-hot h2 {
-    color: white;
-    padding: 10px;
-    background-color: darkblue;
-}
-
-.content-news .section-realty h2 {
-    color: white;
-    padding: 10px;
-    background-color: cornflowerblue;
-}
-
-.content-news .section-hot .footer {
-    color: darkblue;
-}
-
-.content-news .section-realty .footer {
-    color: cornflowerblue;
-}
-.content-news .section-news .footer {
-    background-color: white;
+.samc-slider .slide-img {
+    height: 200px;
 }
